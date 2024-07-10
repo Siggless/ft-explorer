@@ -26,9 +26,9 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import re
 import qdarkgraystyle
-from . import data
+from bpdeditor.bpd_gui import BPDWindow
+from . import data, data_display
 from PyQt5 import QtWidgets, QtGui, QtCore
 
 class MainTree(QtWidgets.QTreeView):
@@ -88,6 +88,9 @@ class MainTree(QtWidgets.QTreeView):
                 self.display.setNode(node)
             else:
                 self.display.setText('(no data)')
+            # Set BPD Editor button hightlight
+            if self.parent.toolbar.action_bpd_editor:
+                self.parent.toolbar.action_bpd_editor.setChecked(BPDWindow.is_valid_node(node))
         else:
             self.display.setText('(nothing selected)')
 
@@ -116,227 +119,6 @@ class MainTree(QtWidgets.QTreeView):
         # Select the item, if we found one.
         if found_path:
             self.setCurrentIndex(current.index())
-
-class DataDisplay(QtWidgets.QTextEdit):
-    """
-    Display area for our data
-    """
-
-    # Syntax Highlighting color definitions.
-    colors = {
-
-        # Default (light, probably) theme
-        False: {
-                'quotes': 'darkgoldenrod',
-                'names': 'mediumblue',
-                'headers': 'darkgreen',
-                'numbers': 'darkred',
-                'bools': 'darkviolet',
-            },
-
-        # Dark Theme
-        True: {
-                'quotes': 'palegoldenrod',
-                'names': 'lightblue',
-                'headers': 'lawngreen',
-                'numbers': 'palevioletred',
-                'bools': 'violet',
-            },
-        }
-
-    def __init__(self, parent):
-        super().__init__(parent)
-        self.parent = parent
-        self.initial_display()
-        self.setReadOnly(True)
-        self.search_str = None
-
-        # Use a Monospaced font
-        font = QtGui.QFont(self.parent.settings.value('mainwindow/datafont', 'Monospace'))
-        fontsize = self.parent.settings.value('mainwindow/datafontsize')
-        try:
-            if fontsize:
-                font.setPointSizeF(float(fontsize))
-        except ValueError:
-            pass
-        font.setStyleHint(font.Monospace)
-        self.setFont(font)
-
-        # Default to not word-wrapping
-        self.setWordWrapMode(QtGui.QTextOption.NoWrap)
-
-    def initial_display(self):
-        """
-        Clears out output
-        """
-        self.node = None
-        self.setText('(nothing selected)')
-
-    def setText(self, text, clear_node=True):
-        """
-        Sets text
-        """
-        if clear_node:
-            self.node = None
-        super().setText(text)
-
-    def setHtml(self, text, clear_node=True):
-        """
-        Sets HTML
-        """
-        if clear_node:
-            self.node = None
-        super().setHtml(text)
-
-    def setPlainText(self, text, clear_node=True):
-        """
-        Sets plain text
-        """
-        if clear_node:
-            self.node = None
-        super().setPlainText(text)
-
-    def setNode(self, node):
-        """
-        Sets our currently-shown node, which will take into account our
-        multiline option.
-        """
-        self.node = node
-        self.updateText()
-
-    def updateText(self):
-        """
-        Updates the text that we're showing, taking into account our
-        multiline option.
-        """
-        # Only update if we have a node
-        if self.node:
-
-            do_multiline = self.parent.toolbar.action_multiline.isChecked()
-            if do_multiline:
-                # This is all pretty hacky, but seems to work fine.
-                output = []
-                for line in self.node.load():
-                    indent_level = 0
-                    parts = line.split('=', 1)
-                    if len(parts) == 1:
-                        output.append(line)
-                    else:
-                        chars = [char for char in parts[0]]
-                        chars.append('=')
-                        for char in parts[1]:
-                            if char == '(':
-                                indent_level += 1
-                                chars.append(char)
-                                chars.append("\n")
-                                output.append(''.join(chars))
-                                chars = [' '*((indent_level+1)*4)]
-                            elif char == ')':
-                                if indent_level > 0:
-                                    indent_level -= 1
-                                chars.append("\n")
-                                output.append(''.join(chars))
-                                chars = [' '*((indent_level+1)*4)]
-                                chars.append(char)
-                            elif char == ',' and indent_level > 0:
-                                chars.append(char)
-                                chars.append("\n")
-                                output.append(''.join(chars))
-                                chars = [' '*((indent_level+1)*4)]
-                            else:
-                                chars.append(char)
-                        output.append(''.join(chars))
-            else:
-                output = [line for line in self.node.load()]
-
-            # Apply syntax highlighting.  This is pretty hokey as well, but
-            # seems to work well enough.  Ideally we should be *actually*
-            # parsing things, but whatever.  Because we're just throwing a
-            # bunch of regexes at the text, the order is important; our
-            # conversion from <,> to &lt;,&gt; has to happen first, since
-            # otherwise it'd strip out the HTML we put in; and the quotes
-            # have to be processed next, as well.
-            do_syntax = self.parent.toolbar.action_syntax.isChecked()
-            colors = self.colors[self.parent.toolbar.action_dark.isChecked()]
-            for (idx, line) in enumerate(output):
-
-                # Get rid of anything which could be considered HTML by accident.
-                # (some descriptions, like GD_Aster_ClapTrapBeard.M_ClapTrapBeard, use
-                # HTML like <br>).  Do this regardless of syntax highlighting.
-                output[idx] = output[idx].replace('<', '&lt;')
-                output[idx] = output[idx].replace('>', '&gt;')
-
-                if do_syntax:
-
-                    # See if we have an assignment of some sort in here
-                    have_assignment = '=' in output[idx]
-
-                    # Colorize anything in quotes
-                    dostuff = False
-                    if self.node.name == 'WillowWaypoint_6' and 'KillJackSet' in output[idx]:
-                        dostuff = True
-                    output[idx] = re.sub(
-                            '(["\'])(.*?)\\1',
-                            r'<font color="{}">\1\2\1</font>'.format(colors['quotes']),
-                            output[idx])
-
-                    # Make the lefthand side of any assignment blue
-                    if have_assignment:
-                        output[idx] = re.sub(
-                                r'^(\s+)([^=]+?)=',
-                                r'\1<font color="{}">\2</font>='.format(colors['names']),
-                                output[idx])
-
-                    # Section headers in green
-                    output[idx] = re.sub(
-                            r'^=== (.*) ===',
-                            r'<font color="{}">=== \1 ===</font>'.format(colors['headers']),
-                            output[idx])
-
-                    # Numbers in red
-                    output[idx] = re.sub(
-                            r'\((\d+)\)',
-                            r'(<font color="{}">\1</font>)'.format(colors['numbers']),
-                            output[idx])
-                    output[idx] = re.sub(
-                            r'=(-?[0-9\.]+)',
-                            r'=<font color="{}">\1</font>'.format(colors['numbers']),
-                            output[idx])
-
-                    # Booleans/Nones in purple, I guess
-                    output[idx] = re.sub(
-                            r'=(none|true|false)',
-                            r'=<font color="{}">\1</font>'.format(colors['bools']),
-                            output[idx],
-                            flags=re.I)
-
-                # Also turn any initial spaces into &nbsp;  Do this regardless
-                # of syntax highlighting
-                space_count = 0
-                for char in output[idx]:
-                    if char == ' ':
-                        space_count += 1
-                    else:
-                        break
-                if space_count > 0:
-                    output[idx] = '{}{}'.format('&nbsp;'*space_count, output[idx][space_count:])
-
-            # Display
-            self.setHtml('<br>'.join(output), clear_node=False)
-
-    def search_for(self, search_str):
-        """
-        Searches for text inside our currently-displayed stuff
-        """
-        self.search_str = search_str
-        self.find(search_str)
-
-    def search_next(self):
-        """
-        Searches for the next instance of our previously-searched text
-        """
-        if self.search_str:
-            self.find(self.search_str)
 
 class GameSelect(QtWidgets.QComboBox):
     """
@@ -399,6 +181,9 @@ class MainToolBar(QtWidgets.QToolBar):
         self.action_syntax.setCheckable(True)
         self.action_syntax.setChecked(parent.settings.value('toggles/syntax', True, type=bool))
 
+        self.action_bpd_editor = self.addAction('BPD Editor', parent.open_bpdeditor)
+        self.action_bpd_editor.setCheckable(True)
+        
         # Spacer, after which everything else will be right-aligned
         spacer_label = QtWidgets.QLabel()
         spacer_label.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -423,6 +208,7 @@ class GUI(QtWidgets.QMainWindow):
         self.data_tps = data_tps
         self.data_aodk = data_aodk
         self.data = None
+        self.bpd_windows=[]
         self.app = app
 
         # Set some window properties 
@@ -459,7 +245,7 @@ class GUI(QtWidgets.QMainWindow):
         self.splitter = QtWidgets.QSplitter()
 
         # Set up our display area and add it to the hbox
-        self.display = DataDisplay(self)
+        self.display = data_display.DataDisplay(self)
 
         # Set up our treeview
         current_game = self.settings.value('toggles/game', 'bl2')
@@ -470,6 +256,13 @@ class GUI(QtWidgets.QMainWindow):
         else:
             self.data = self.data_aodk
         self.treeview = MainTree(self, self.data, self.display)
+        # Restore last opened node if set
+        if self.settings.contains('mainwindow/lastobjectname'):
+            try:
+                paths = self.data.get_node_paths_by_full_object(self.settings.value('mainwindow/lastobjectname'))
+                self.treeview.go_to_path(paths)
+            except:
+                print("no last object found!")
 
         # Add both to the splitter
         self.splitter.addWidget(self.treeview)
@@ -522,9 +315,9 @@ class GUI(QtWidgets.QMainWindow):
                 'Go to object:',
                 text='')
         if status:
-            paths = []
             try:
                 paths = self.data.get_node_paths_by_full_object(objectname)
+                self.settings.setValue('mainwindow/lastobjectname', objectname)
                 self.treeview.go_to_path(paths)
             except KeyError as e:
                 QtWidgets.QMessageBox.information(self,
@@ -594,6 +387,56 @@ class GUI(QtWidgets.QMainWindow):
         else:
             self.app.setStyleSheet('')
         self.display.updateText()
+
+    def test_bpdeditor(self):
+        """
+        Tests opening the BPD Editor with every BPD in the data
+        The data loop is copied from bpd_dot's generate_all_dots main method
+        """
+        game = self.data.game
+        from .data import Data
+        data = Data(game)
+
+        objects = []
+        #objects.extend(data.get_all_by_type('AIBehaviorProviderDefinition'))
+        objects.extend(data.get_all_by_type('BehaviorProviderDefinition'))
+
+        start_from=7000
+        max_len_seen = 0
+        for (idx, bpd_name) in enumerate(sorted(objects)[start_from:]):
+            node = data.get_node_by_full_object(bpd_name)
+            if not node:
+                print('ERROR: {} not found'.format(game, bpd_name))
+                
+            if BPDWindow.is_valid_node(node):
+                print(str(bpd_name))
+                bpd_window = BPDWindow(self.settings, self.app)
+                try:
+                    bpd_window.set_node(node)
+                    bpd_window.show()
+                    bpd_window.graphFrame.OrganiseTree()
+                    bpd_window.close()
+                except Exception as e:
+                    raise e
+                
+    def open_bpdeditor(self):
+        """
+        Opens a BPD Editor for the current object
+        """
+        #self.test_bpdeditor() # Test loading all BPDs
+        if BPDWindow.is_valid_node(self.display.node):
+            self.toolbar.action_bpd_editor.setChecked(True)
+            bpd_window = BPDWindow(self.settings, self.app)
+            self.bpd_windows.append(bpd_window) # Stop it being unloaded - but never gets disposed on close. IDK it works...
+            try:
+                bpd_window.set_node(self.display.node)
+                bpd_window.show()
+                bpd_window.graphFrame.OrganiseTree()
+            except:
+                QtWidgets.QMessageBox.information(self, 'Error', 'An error occured when setting up the nodes!')
+        else:
+            self.toolbar.action_bpd_editor.setChecked(False)
+            QtWidgets.QMessageBox.information(self, 'Error', 'Current object is not a BPD!')
 
     def switch_game(self, data):
         """
