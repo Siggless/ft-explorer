@@ -623,15 +623,14 @@ class GUI(QtWidgets.QMainWindow):
         #objects.extend(data.get_all_by_type('AIBehaviorProviderDefinition'))
         objects.extend(data.get_all_by_type('BehaviorProviderDefinition'))
 
-        start_from=7000
-        max_len_seen = 0
+        start_from=0
         for (idx, bpd_name) in enumerate(sorted(objects)[start_from:]):
             node = data.get_node_by_full_object(bpd_name)
             if not node:
                 print('ERROR: {} not found'.format(game, bpd_name))
                 
             if BPDWindow.is_valid_node(node):
-                print(str(bpd_name))
+                print(str(idx)+' '+str(bpd_name))
                 bpd_window = BPDWindow(self.settings, self.app)
                 try:
                     bpd_window.set_node(node)
@@ -640,12 +639,112 @@ class GUI(QtWidgets.QMainWindow):
                     bpd_window.close()
                 except Exception as e:
                     raise e
+
+    def generate_bpd_dicts(self):
+        """
+        Generates the behaviors and events json files for all BPDs in the data
+        The json files contain, for each Behavior class or Event name, lists of all unique values found for the link data
+        """
+        game = self.data.game
+        from .data import Data
+        data = Data(game)
+        from bpdeditor.bpd_classes import BehaviorSequence
+        from os import path
+        import json, inspect
+        behaviorFilePath = path.join(path.dirname(inspect.getfile(self.__class__)), "behaviors.json")
+        eventFilePath = path.join(path.dirname(inspect.getfile(self.__class__)), "events.json")
+        behaviorDict={}
+        eventDict={}
+
+        objects = []
+        objects.extend(data.get_all_by_type('AIBehaviorProviderDefinition'))
+        objects.extend(data.get_all_by_type('BehaviorProviderDefinition'))
+
+        start_from=0
+        for (idx, bpd_name) in enumerate(sorted(objects)[start_from:]):
+            node = data.get_node_by_full_object(bpd_name)
+            if not node:
+                print('ERROR: {} not found'.format(game, bpd_name))
+            
+            print(str(idx)+' '+str(bpd_name))
+            bpd = node.get_structure()
+            if 'BehaviorSequences' not in bpd:
+                continue
+            sequences = [BehaviorSequence(i) for i in bpd['BehaviorSequences']]
+            
+            for seq in sequences:
+                # Events - I am not logging Events that have no output links because the dictionary gets very big
+                for event in seq.EventData2:
+                    eventName:str = event.UserData['EventName'].strip('"')
+                    if len(event.Variables) > 0 or eventName.startswith('On'):
+                        if eventName not in eventDict:
+                            eventDict[eventName]={'Count':1,'FilterObject':[],'OutputVariablesByConnectionIndex':{}}
+                        else:
+                            eventDict[eventName]['Count']=eventDict[eventName]['Count']+1
+                            
+                        if event.UserData['FilterObject'] not in eventDict[eventName]['FilterObject']:
+                            eventDict[eventName]['FilterObject'].append(event.UserData['FilterObject'])
+                            
+                        links = eventDict[eventName]['OutputVariablesByConnectionIndex']
+                        for idx,vld in enumerate(event.Variables):
+                            cID = vld.ConnectionIndex
+                            if cID not in links:
+                                links[cID]={'PropertyName':[],'VariableLinkType':[],'ArrayIndexFromEvent':[],'CachedProperty':[]}
+                            link = links[cID]
+                            if vld.PropertyName not in link['PropertyName']:
+                                link['PropertyName'].append(vld.PropertyName)
+                            vlt = vld.VariableLinkType.name
+                            if vlt not in link['VariableLinkType']:
+                                link['VariableLinkType'].append(vlt)
+                            if idx not in link['ArrayIndexFromEvent']:
+                                link['ArrayIndexFromEvent'].append(idx)
+                            if vld.CachedProperty not in link['CachedProperty']:
+                                link['CachedProperty'].append(vld.CachedProperty)
                 
+                # Behaviors
+                for beh in seq.BehaviorData2:
+                    className = beh.BehaviorClass
+                    if className not in behaviorDict:
+                        behaviorDict[className]={'Count':1,'OutputLinkIds':[],'LinkedVariablesByPropertyName':{}}
+                    else:
+                        behaviorDict[className]['Count']=behaviorDict[className]['Count']+1
+                        
+                    for old in beh.Outputs:
+                        lID = old.LinkId
+                        if lID not in behaviorDict[className]['OutputLinkIds']:
+                            behaviorDict[className]['OutputLinkIds'].append(lID)
+                            
+                    links = behaviorDict[className]['LinkedVariablesByPropertyName']
+                    for idx,vld in enumerate(beh.Variables):
+                        if vld.PropertyName not in links:
+                            links[vld.PropertyName]={'VariableLinkType':[],'ConnectionIndex':[],'ArrayIndexFromBehavior':[],'CachedProperty':[]}
+                        link = links[vld.PropertyName]
+                        vlt = vld.VariableLinkType.name
+                        if vlt not in link['VariableLinkType'] or vld.ConnectionIndex not in link['ConnectionIndex']:
+                            link['VariableLinkType'].append(vlt)
+                            link['ConnectionIndex'].append(vld.ConnectionIndex)
+                        if idx not in link['ArrayIndexFromBehavior']:
+                            link['ArrayIndexFromBehavior'].append(idx)
+                        if vld.CachedProperty not in link['CachedProperty']:
+                            link['CachedProperty'].append(vld.CachedProperty)
+            
+            if idx % 100 == 0:
+                with open(behaviorFilePath, "w") as file:
+                    json.dump(behaviorDict, file, indent=4)
+                with open(eventFilePath, "w") as file:
+                    json.dump(eventDict, file, indent=4)
+                
+        with open(behaviorFilePath, "w") as file:
+            json.dump(behaviorDict, file, indent=4)
+        with open(eventFilePath, "w") as file:
+            json.dump(eventDict, file, indent=4)
+
     def open_bpdeditor(self):
         """
         Opens a BPD Editor for the current object
         """
         #self.test_bpdeditor() # Test loading all BPDs
+        #self.generate_bpd_dicts()  # Generate the behavior and event json files from all BPDs
         if BPDWindow.is_valid_node(self.display.node):
             self.toolbar.action_bpd_editor.setChecked(True)
             bpd_window = BPDWindow(self.settings, self.app)
