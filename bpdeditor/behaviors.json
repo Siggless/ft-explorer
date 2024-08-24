@@ -1,0 +1,7209 @@
+{
+    "Behavior_MeleeAttack": {
+        "Count": 1311,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_TriggerDialogEvent": {
+        "Count": 4693,
+        "OutputLinkIds": [
+            1,
+            0
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Other": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "NameTag": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeInstanceDataSwitch": {
+        "Count": 10559,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "NewValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "IntProperty'WillowGame.Behavior_ChangeInstanceDataSwitch:NewValue'",
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AIThrowProjectileAtTarget": {
+        "Count": 960,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "SpawnedProjectile": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RandomBranch": {
+        "Count": 848,
+        "OutputLinkIds": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Conditions": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "ArrayProperty'WillowGame.Behavior_RandomBranch:Conditions'"
+                ]
+            }
+        }
+    },
+    "Behavior_HasMissions": {
+        "Count": 115,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_PlayAIMissionContextDialog": {
+        "Count": 77,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "PlayerWhoUsedMe": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ShowMissionInterface": {
+        "Count": 178,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetStance": {
+        "Count": 800,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetFlag": {
+        "Count": 324,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RegisterTargetable": {
+        "Count": 377,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AIHold": {
+        "Count": 885,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PhaseLockHold": {
+        "Count": 34,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeCollision": {
+        "Count": 1360,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeUsability": {
+        "Count": 3585,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeVisibility": {
+        "Count": 863,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeRemoteBehaviorSequenceState": {
+        "Count": 3401,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ToggleNPCAlly": {
+        "Count": 32,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_UpdateMissionObjective": {
+        "Count": 1067,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetUsableIcon": {
+        "Count": 612,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpecialMove": {
+        "Count": 1702,
+        "OutputLinkIds": [
+            1,
+            0
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpecialMove": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnItems": {
+        "Count": 587,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "ItemDropVelocity": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ItemDropOffset": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_UseObject": {
+        "Count": 16,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "User": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IsSequenceEnabled": {
+        "Count": 456,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ForceDownState": {
+        "Count": 9,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ConvertInstanceDataIntoPhysicsActor": {
+        "Count": 322,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    2,
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DetachImpulse": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ImpulseSourceLocation": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnedPhysicsActor": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PostAkEvent": {
+        "Count": 4016,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeSpin": {
+        "Count": 850,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "RollRate": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "YawRate": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "PitchRate": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CauseDamage": {
+        "Count": 495,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1,
+                    0,
+                    3,
+                    4
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectDamage": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4,
+                    5,
+                    3,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    2,
+                    1,
+                    0,
+                    4
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectChance": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "MomentumFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageSource": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageTypeDefinition": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    4
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "RadiusFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    0,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "OverrideContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_Detonate": {
+        "Count": 1007,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ScreenParticle": {
+        "Count": 158,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_Bounce": {
+        "Count": 695,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "HitNormal": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ElasticityScaleFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetPawnThrottleData": {
+        "Count": 23,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_CustomEvent": {
+        "Count": 1120,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RemoteCustomEvent": {
+        "Count": 1665,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RemoteEvent": {
+        "Count": 1748,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_Delay": {
+        "Count": 2042,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Delay": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_Delay:Delay'"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnParticleSystem": {
+        "Count": 3124,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DrawScale": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnedEmitter": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ParticleEffect": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "RelativeLocation": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "InstanceDataContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CoordinatedEffect": {
+        "Count": 1336,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetSkelControlActive": {
+        "Count": 1535,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetGodMode": {
+        "Count": 64,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "bNonCheatGodMode": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "BoolProperty'WillowGame.Behavior_SetGodMode:bNonCheatGodMode'"
+                ]
+            }
+        }
+    },
+    "Behavior_SimpleAnimPlay": {
+        "Count": 812,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeCanTarget": {
+        "Count": 97,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SimpleAnimStop": {
+        "Count": 201,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DebugMessage": {
+        "Count": 947,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "DebugObject": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DebugInt": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DebugFloat": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_DebugMessage:DebugFloat'"
+                ]
+            },
+            "DebugBool": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DebugVector": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Destroy": {
+        "Count": 613,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnProjectile": {
+        "Count": 1895,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "SpawnDirectionOverride": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnMaterialOverride": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4,
+                    3,
+                    5
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DrawScaleOverride": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    5,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "RelativeLocation": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    5
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnedProjectile": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0,
+                    2,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "NumProjectilesFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4,
+                    3,
+                    5
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "OwnerContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "TimeBetweenShots": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "GearLikenessContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetAnimTree": {
+        "Count": 18,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetPhysics": {
+        "Count": 246,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_VectorMath": {
+        "Count": 265,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "A": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "VectorResult": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1,
+                    0,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Length": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpecialMoveStop": {
+        "Count": 51,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_MissionCustomEvent": {
+        "Count": 296,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetUsabilityCost": {
+        "Count": 41,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "CostAmount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "IntProperty'WillowGame.Behavior_SetUsabilityCost:CostAmount'"
+                ]
+            }
+        }
+    },
+    "Behavior_SimpleMath": {
+        "Count": 1630,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "A": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_SimpleMath:A'"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    2,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_SimpleMath:B'"
+                ]
+            },
+            "": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetInfoBarVisibility": {
+        "Count": 69,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeAllegiance": {
+        "Count": 337,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IsObjectPlayer": {
+        "Count": 124,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "PlayerCandidate": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DamageSourceSwitch": {
+        "Count": 107,
+        "OutputLinkIds": [
+            2,
+            1,
+            10,
+            11,
+            12,
+            13,
+            14,
+            3,
+            5,
+            4,
+            15,
+            6,
+            7,
+            8,
+            9
+        ],
+        "LinkedVariablesByPropertyName": {
+            "DamageSource": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetAIFlag": {
+        "Count": 2365,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Explode": {
+        "Count": 1227,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "DamageContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3,
+                    6
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    2,
+                    1,
+                    4
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectDamage": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    5
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    2,
+                    4,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageRadiusFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectChance": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    5,
+                    3,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "HitNormal": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "LocationOffset": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Definition": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "HitContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    3,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CreateImpactEffect": {
+        "Count": 598,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CompareFloat": {
+        "Count": 1582,
+        "OutputLinkIds": [
+            0,
+            1,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "ValueA": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_CompareFloat:ValueA'"
+                ]
+            },
+            "ValueB": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_CompareFloat:ValueB'"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_UnlockAchievementForAllPlayers": {
+        "Count": 36,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Transform": {
+        "Count": 247,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetCleanupParameters": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DiscoverLevelChallengeObject": {
+        "Count": 137,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "UnlockForPlayer": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_FireBeam": {
+        "Count": 172,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "TargetOffset": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamagePerSecondFormula": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DestroyBeams": {
+        "Count": 129,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_HeadLookHold": {
+        "Count": 8,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ClearStatusEffects": {
+        "Count": 54,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CompareObject": {
+        "Count": 448,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "ObjectA": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ObjectB": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeEnvironmentTag": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CreateWeatherSystem": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DestroyWeatherSystem": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IntMath": {
+        "Count": 924,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "A": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "IntProperty'WillowGame.Behavior_IntMath:A'",
+                    "None"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "IntProperty'WillowGame.Behavior_IntMath:B'",
+                    "None"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IntSwitchRange": {
+        "Count": 322,
+        "OutputLinkIds": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            11,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+        ],
+        "LinkedVariablesByPropertyName": {
+            "CheckValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "IntProperty'WillowGame.Behavior_IntSwitchRange:CheckValue'",
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Metronome": {
+        "Count": 245,
+        "OutputLinkIds": [
+            1,
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TickInterval": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_Metronome:TickInterval'"
+                ]
+            },
+            "Duration": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "MaxTickCount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetChallengeCompleted": {
+        "Count": 17,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "UnlockForPlayer": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CompareInt": {
+        "Count": 366,
+        "OutputLinkIds": [
+            0,
+            1,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "A": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "IntProperty'WillowGame.Behavior_CompareInt:A'"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "IntProperty'WillowGame.Behavior_CompareInt:B'"
+                ]
+            }
+        }
+    },
+    "Behavior_StartDeathRagdoll": {
+        "Count": 6,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Kill": {
+        "Count": 231,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Gate": {
+        "Count": 529,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "ActivationCount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Output",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None",
+                    "IntProperty'GearboxFramework.Behavior_Gate:ActivationCount'"
+                ]
+            },
+            "GateCount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "IntProperty'GearboxFramework.Behavior_Gate:GateCount'"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_FindHomingTarget": {
+        "Count": 145,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetSearchFOVAngle": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CompareBool": {
+        "Count": 1065,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "BoolValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "BoolProperty'GearboxFramework.Behavior_CompareBool:BoolValue'"
+                ]
+            }
+        }
+    },
+    "Behavior_BoolMath": {
+        "Count": 1028,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "A": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "BoolProperty'WillowGame.Behavior_BoolMath:A'"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    2,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeAnyBehaviorSequenceState": {
+        "Count": 129,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GFxMoviePlay": {
+        "Count": 33,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ModifyTimer": {
+        "Count": 462,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "NewTimerDelay": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "TimeRemaining": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GetClosestPlayer": {
+        "Count": 45,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Distance": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Player": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetVectorParam": {
+        "Count": 2304,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "RValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_SetVectorParam:RValue'"
+                ]
+            },
+            "GValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_SetVectorParam:GValue'"
+                ]
+            },
+            "bValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_SetVectorParam:bValue'"
+                ]
+            },
+            "AValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    3
+                ],
+                "ArrayIndexFromBehavior": [
+                    4,
+                    2,
+                    1,
+                    3
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_SetVectorParam:AValue'"
+                ]
+            }
+        }
+    },
+    "Behavior_SetFloatParam": {
+        "Count": 617,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Value": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'GearboxFramework.Behavior_SetFloatParam:Value'"
+                ]
+            }
+        }
+    },
+    "Behavior_AdvanceObjectiveSet": {
+        "Count": 1455,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_MissionRemoteEvent": {
+        "Count": 1739,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_RadarIcon": {
+        "Count": 5,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_RemoveInstanceData": {
+        "Count": 80,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AILevelUp": {
+        "Count": 118,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Conditional": {
+        "Count": 1240,
+        "OutputLinkIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AIChangeInventory": {
+        "Count": 98,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_LeaderCommand": {
+        "Count": 112,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DetachActor": {
+        "Count": 70,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnFromPopulationSystem": {
+        "Count": 112,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnedActor": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0,
+                    4,
+                    3,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "GameStageContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "MyOwner": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnLocOffset": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "InstanceDataContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IncrementPlayerStat": {
+        "Count": 262,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "IncAmount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_FailMission": {
+        "Count": 96,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_CompleteMission": {
+        "Count": 5,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ClearObjective": {
+        "Count": 70,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ActivateMission": {
+        "Count": 13,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ObjectClassSwitch": {
+        "Count": 51,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetMaterialParameters": {
+        "Count": 305,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AttachItems": {
+        "Count": 107,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SendMessageToPlayers": {
+        "Count": 104,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ChangeDialogName": {
+        "Count": 341,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AttachActor": {
+        "Count": 59,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ToAttach": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ToggleDialog": {
+        "Count": 73,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AddInstanceData": {
+        "Count": 236,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_StopMeleeAttack": {
+        "Count": 202,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "PlayerBehavior_CameraAnim": {
+        "Count": 71,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ActivateSkill": {
+        "Count": 374,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "AdditionalTargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GetPlayerStat": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GiveChallengeToPlayer": {
+        "Count": 20,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ResetHitRegionHealth": {
+        "Count": 66,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "HitRegion": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AISpawn": {
+        "Count": 308,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "SpawnedActor": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "OverrideContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "StructProperty'WillowGame.Behavior_AISpawn:OverrideContext'",
+                    "None"
+                ]
+            },
+            "PopDef": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IsCensoredMode": {
+        "Count": 26,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_PlaySound": {
+        "Count": 77,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Sound": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_IsObjectVehicle": {
+        "Count": 35,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "VehicleCandidate": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DropItems": {
+        "Count": 45,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ActivateInstancedMissionBehaviorSequence": {
+        "Count": 41,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_StatusEffectSwitch": {
+        "Count": 29,
+        "OutputLinkIds": [
+            1,
+            4,
+            0,
+            2,
+            3,
+            5
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DeactivateSkill": {
+        "Count": 432,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_VectorToLocalSpace": {
+        "Count": 12,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "WorldSpaceVector": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "VectorResult": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_MakeVector": {
+        "Count": 44,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "X": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Y": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Z": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PlayHardFlinch": {
+        "Count": 3,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_SetSpeed": {
+        "Count": 49,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "NewSpeed": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpeedMultiplier": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeScale": {
+        "Count": 64,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Scale": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'Engine.Behavior_ChangeScale:Scale'"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeParticleSystemActiveState": {
+        "Count": 73,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetAnemoneInfectionState": {
+        "Count": 6,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "HeightFog": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AITargeting": {
+        "Count": 32,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnDecal": {
+        "Count": 130,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AddInstanceDataFromBehaviorContext": {
+        "Count": 239,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ObjectContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_TagPayloadType": {
+        "Count": 209,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_DamageArea": {
+        "Count": 44,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AssignObjectVariable": {
+        "Count": 173,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Value": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_SetProximity": {
+        "Count": 24,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_Switch": {
+        "Count": 42,
+        "OutputLinkIds": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "LinkedVariablesByPropertyName": {
+            "CheckValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_Attach": {
+        "Count": 85,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "HitActor": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "HitNormal": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "HitLocation": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "BoneIndex": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    4
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_InterpolateFloatOverTime": {
+        "Count": 56,
+        "OutputLinkIds": [
+            -1,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Duration": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "BeginningValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "EndingValue": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    2,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_SetStickyGrenade": {
+        "Count": 59,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "ProjectileBehavior_SetHomingTarget": {
+        "Count": 19,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "AssignedTarget": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetLookAtSpeed": {
+        "Count": 64,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_GiveInjuredPlayerSecondWind": {
+        "Count": 26,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetObjectParam": {
+        "Count": 225,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Value": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "ObjectProperty'GearboxFramework.Behavior_SetObjectParam:Value'"
+                ]
+            }
+        }
+    },
+    "Behavior_ReviveInjuredPlayer": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "ReviverContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AddMissionDirectives": {
+        "Count": 14,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetAnimSwitchNode": {
+        "Count": 98,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetHardAttach": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AIProvoke": {
+        "Count": 34,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ProvokeInstigator": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AICloak": {
+        "Count": 60,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetDeathDefinition": {
+        "Count": 36,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GetVelocity": {
+        "Count": 8,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Velocity": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_ViewShake": {
+        "Count": 33,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AttemptStatusEffect": {
+        "Count": 44,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "TargetContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffect": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectChance": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "StatusEffectDamage": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    3,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    3,
+                    1,
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_CustomAnimation": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RegisterFastTravelDefinition": {
+        "Count": 11,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PlayAnimation": {
+        "Count": 33,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetShieldDamageResistanceType": {
+        "Count": 15,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetShieldTriggeredState": {
+        "Count": 35,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PostProcessOverlay": {
+        "Count": 4,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AttributeEffect": {
+        "Count": 125,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetMaterialScalarFade": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AISetFlight": {
+        "Count": 3,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_RunBehaviorCollection": {
+        "Count": 15,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_OverrideWeaponCrosshair": {
+        "Count": 9,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ReloadComplete": {
+        "Count": 5,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AwardExperienceForMyDeath": {
+        "Count": 11,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_NetworkRoleSwitch": {
+        "Count": 6,
+        "OutputLinkIds": [
+            0
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AIPatsy": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Patsy": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnParticleSystemAtWorldLocation": {
+        "Count": 8,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Location": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    2,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Direction": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    3,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_FollowAllegiance": {
+        "Count": 7,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "AllegianceParent": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_UnlockAchievement": {
+        "Count": 12,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_Melee": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetSkelControlSingleBoneData": {
+        "Count": 90,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "PlayerBehavior_RegisterFastTravelStation": {
+        "Count": 21,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GFxMovieRegister": {
+        "Count": 14,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_OpinionSwitch": {
+        "Count": 3,
+        "OutputLinkIds": [
+            0,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Other": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DestroyBeamsForSource": {
+        "Count": 24,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SpawnLootAroundPoint": {
+        "Count": 7,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "CustomLocation": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "ItemPools": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_GetVectorParam": {
+        "Count": 7,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "R": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "G": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    2
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "B": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    2
+                ],
+                "ArrayIndexFromBehavior": [
+                    3
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_UpdateCollision": {
+        "Count": 4,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AIPriority": {
+        "Count": 30,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Target": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ClientConsoleCommand": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_StopDialog": {
+        "Count": 29,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_ForceFeedback": {
+        "Count": 21,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DamageClassSwitch": {
+        "Count": 13,
+        "OutputLinkIds": [
+            0,
+            1,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "HitObject": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AddObjectInstanceData": {
+        "Count": 10,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "InstanceDataObject": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_EnterVehicle": {
+        "Count": 5,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "VehicleContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_WeaponsRestriction": {
+        "Count": 16,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetBeingHealed": {
+        "Count": 32,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ReCalculateResourcePoolValues": {
+        "Count": 7,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RefillResourcePool": {
+        "Count": 18,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetNumBankSlots": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "NewBankSlotCount": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnLootAtPoints": {
+        "Count": 3,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "ItemPools": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "SpawnPoints": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "ProjectileBehavior_SetExplosionDefinition": {
+        "Count": 26,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "ProjectileBehavior_SetDamageTypeDefinition": {
+        "Count": 26,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "None": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_PhysXLevel": {
+        "Count": 21,
+        "OutputLinkIds": [
+            0,
+            1,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_UnlockCustomizationFromRewardPool": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_QueuePersonalEcho": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DropProjectile": {
+        "Count": 41,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_StopAkAmbientSound": {
+        "Count": 23,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetElevatorButtonGlowing": {
+        "Count": 8,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_StartAkAmbientSound": {
+        "Count": 6,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ToggleObstacle": {
+        "Count": 4,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetJackVoiceModulatorState": {
+        "Count": 10,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AddInventoryToStorage": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetUsabilityByMissionDirectives": {
+        "Count": 11,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SpawnFromVehicleSpawnStation": {
+        "Count": 3,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_CheckMapChangeConditions": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetCompassIcon": {
+        "Count": 3,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_GFxMovieSetState": {
+        "Count": 2,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_CombatPerchThrow": {
+        "Count": 45,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_CombatPerch": {
+        "Count": 25,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_RotatePawn": {
+        "Count": 25,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SpawnPerch": {
+        "Count": 16,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "SpawnedPerch": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_MatchTransform": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Source": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_PostAkEventGetRTPC": {
+        "Count": 6,
+        "OutputLinkIds": [
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Result": {
+                "VariableLinkType": [
+                    "BVARLINK_Output"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_FireShot": {
+        "Count": 8,
+        "OutputLinkIds": [
+            1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "NumProjectiles": {
+                "VariableLinkType": [
+                    "BVARLINK_Input",
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    1,
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0,
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "TimeBetweenShots": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "WeaponOwnerContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AISetWeaponFireRotation": {
+        "Count": 6,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "ProjectileBehavior_LevelOff": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_StopMissionTimer": {
+        "Count": 25,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_StartMissionTimer": {
+        "Count": 23,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_AddMissionTime": {
+        "Count": 34,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ChangeCollisionSize": {
+        "Count": 3,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Radius": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeWeaponVisibility": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ShowGenericReviveMessage": {
+        "Count": 4,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "OtherPlayer": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_DamageSurfaceTypeSwitch": {
+        "Count": 2,
+        "OutputLinkIds": [
+            1,
+            2
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "DamageSurfaceType": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ActivateListenerSkill": {
+        "Count": 4,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeSkillBehaviorSequenceState": {
+        "Count": 7,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetAkRTPCValue": {
+        "Count": 7,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "Value": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1,
+                    0
+                ],
+                "CachedProperty": [
+                    "None",
+                    "FloatProperty'WillowGame.Behavior_SetAkRTPCValue:Value'"
+                ]
+            }
+        }
+    },
+    "Behavior_SkillCustomEvent": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetSkillDefinitionForInjuredStrings": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_SpawnCurrentProjectile": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ShowPullThePinNotification": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_RefillWeapon": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetExtraMuzzleEffect": {
+        "Count": 2,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetExtraImpactEffect": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SetMorphNodeWeight": {
+        "Count": 3,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_AITakeMoney": {
+        "Count": 6,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context",
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0,
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_UnlockAvatarAwardForAllPlayers": {
+        "Count": 2,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ResetActionSkillCooldown": {
+        "Count": 3,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ChangeDenAllegiance": {
+        "Count": 12,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_FinishLifting": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_Charm": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "CharmOwner": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_NotifyThoughtLockStatus": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "InstigatingPlayer": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SelectPhaselockTarget": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    1
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            },
+            "LifterSkillContext": {
+                "VariableLinkType": [
+                    "BVARLINK_Input"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    1
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_ForceInjured": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "PlayerBehavior_SetCurrentProjectile": {
+        "Count": 3,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ChangeLocalBehaviorSequenceState": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_QueryDayNightCycle": {
+        "Count": 2,
+        "OutputLinkIds": [
+            0,
+            1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_ChangeBoneVisibility": {
+        "Count": 7,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_WeaponBoneControl": {
+        "Count": 2,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "PlayerBehavior_Reload": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {}
+    },
+    "Behavior_SetDemigodMode": {
+        "Count": 1,
+        "OutputLinkIds": [
+            -1
+        ],
+        "LinkedVariablesByPropertyName": {
+            "Context": {
+                "VariableLinkType": [
+                    "BVARLINK_Context"
+                ],
+                "ConnectionIndex": [
+                    0
+                ],
+                "ArrayIndexFromBehavior": [
+                    0
+                ],
+                "CachedProperty": [
+                    "None"
+                ]
+            }
+        }
+    },
+    "Behavior_SpawnActor": {
+        "Count": 1,
+        "OutputLinkIds": [],
+        "LinkedVariablesByPropertyName": {}
+    }
+}
