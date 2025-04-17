@@ -89,10 +89,10 @@ class BPDImportWindow(QtWidgets.QMainWindow):
             return
         
         self.bpdWindow.hide()
-        self.bpdWindow.graphFrame.ClearCanvas()
+        self.bpdWindow.canvas.ClearCanvas()
         self.bpdWindow.set_node(importNode)
         self.bpdWindow.show()
-        self.bpdWindow.graphFrame.OrganiseTree()
+        self.bpdWindow.canvas.OrganiseTree()
         self.close()
 
     def toggle_word_wrap(self):

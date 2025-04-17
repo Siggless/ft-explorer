@@ -1,7 +1,7 @@
 from __future__ import annotations
 import copy
-from enum import Enum
 import struct
+from enum import Enum
 
 '''
 Enums from GearboxFramework.BehaviorProviderDefinition unreal script
@@ -74,186 +74,89 @@ def pack_linkidandlinkedbehavior(linkId:int, behaviorIndex:int):
 
 
 '''
-Python classes to populate from the node data.
-The node data is deep copied now so that we can edit it.
-So after doing it all with these, IDK why I didn't just keep it as a dict.
-I guess this could be used as a view model to handle the updates instead of the GUI... but it doesn't......
+I use QStandardItemModels mapping the column indexes to the item fields,
+ so that I can use a QDataWidgetMapper to handle the widget inputs.
+The views also use the QStandardItems directly where possible.
 '''
-   
-class VariableData:
-    def __init__(self, nodeData, sequence:BehaviorSequence):
-        self.sequence = sequence
-        self.Name:str = nodeData['Name'].strip('"')
-        self.Type:VariableTypes = VariableTypes[nodeData['Type']]
-
-
-class VariableLinkData:
-    def __init__(self, nodeData, sequence:BehaviorSequence):
-        self.sequence = sequence
-        self.PropertyName:str=nodeData['PropertyName'].strip('"')
-        self.VariableLinkType:VariableLinkTypes = VariableLinkTypes[nodeData['VariableLinkType']]
-        self.ConnectionIndex = int(nodeData['ConnectionIndex'])
-        '''Used on some Output variables - seems to be only Events - the parameter index passed to the output?'''
-        self.LinkedVariables:int = int(nodeData['LinkedVariables']['ArrayIndexAndLength'])
-        '''ArrayIndexAndLength pointing to ConsolidatedLinkedVariables'''
-        self.CachedProperty = str(nodeData['CachedProperty'])
-        
-        # Save the linked VariableData objects
-        self.LinkedVariableIndexes=[]
-        self.LinkedVariableList=[]
-        if self.sequence:
-            (index, length) = parse_arrayindexandlength(self.LinkedVariables)
-            self.LinkedVariableIndexes = [self.sequence.ConsolidatedLinkedVariables[i] for i in range(index, index+length)]
-            self.LinkedVariableList = [self.sequence.VariableData[self.sequence.ConsolidatedLinkedVariables[i]] if i >=0 else None for i in range(index, index+length)]
-
-    def PrintDump(self) -> str:
-        stringy:str = f'(PropertyName=\"{self.PropertyName}\",'
-        stringy += f'VariableLinkType={self.VariableLinkType._name_},'
-        stringy += f'ConnectionIndex={str(self.ConnectionIndex)},'
-        stringy += f'LinkedVariables=(ArrayIndexAndLength={self.LinkedVariables}),'
-        stringy += f'CachedProperty={str(self.CachedProperty)})'
-        return stringy
-
-class OutputLinkData:
-    def __init__(self, nodeData, sequence:BehaviorSequence):
-        self.sequence = sequence
-        self.LinkIdAndLinkedBehavior=int(nodeData['LinkIdAndLinkedBehavior'])
-        self.ActiveDelay:float=float(nodeData['ActivateDelay'])
-        (linkID, behaviorIndex) = parse_linkidandlinkedbehavior(self.LinkIdAndLinkedBehavior)
-        self.LinkId:int = linkID
-        self.LinkIndex:int = behaviorIndex
-        
-        # Save the linked BehaviorData object
-        self.LinkedBehavior:BehaviorData = self.sequence.BehaviorData2[self.LinkIndex]
-
-
-class EventData:    
-    def __init__(self, nodeData, sequence:BehaviorSequence):
-        self.sequence = sequence
-        self.NodeData = nodeData
-        self.UserData:dict = nodeData['UserData']
-        self.LinkedVariables:int = int(nodeData['OutputVariables']['ArrayIndexAndLength'])
-        self.OutputLinks:int = int(nodeData['OutputLinks']['ArrayIndexAndLength'])
-        
-        self.Outputs=[]
-        """ List of OutputLinkDatas from the OutputLinks ArrayIndexAndLength """
-        self.Variables=[]
-        """ List of VariableLinkDatas from CVLD """
-        (index, length) = parse_arrayindexandlength(self.LinkedVariables)
-        self.Variables=[sequence.ConsolidatedVariableLinkData[i] for i in range(index, index+length)]
-    
-    def PrintDump(self) -> str:
-        stringy:str = f'UserData=('
-        for key, value in self.UserData.items():
-            stringy += f'{str(key)}={str(value)},'
-
-        stringy = stringy.removesuffix(',')
-        stringy += f'),OutputVariables=(ArrayIndexAndLength={self.LinkedVariables}),OutputLinks=(ArrayIndexAndLength={self.OutputLinks})'
-        return stringy
-    
-    
-class BehaviorData:
-    def __init__(self, nodeData, sequence:BehaviorSequence):
-        self.sequence = sequence
-        self.NodeData = nodeData
-        self.Behavior:str = nodeData['Behavior']
-        self.BehaviorClass:str = 'None'
-        self.BehaviorObject:str = 'None'
-        if self.Behavior != 'None':     # GD_ConstructorRoland.Projectiles.Proj_Ep6_ReinforcementFlare:BehaviorProviderDefinition_0
-            self.BehaviorClass:str = self.Behavior.split('\'')[0]
-            self.BehaviorObject:str = self.Behavior.split('\'')[1]
-        self.LinkedVariables:int = int(nodeData['LinkedVariables']['ArrayIndexAndLength'])
-        self.OutputLinks:int = int(nodeData['OutputLinks']['ArrayIndexAndLength'])
-        
-        self.Outputs=[]
-        """ List of OutputLinkDatas from the OutputLinks ArrayIndexAndLength """
-        self.Variables=[]
-        """ List of VariableLinkDatas from CVLD """
-        (index, length) = parse_arrayindexandlength(self.LinkedVariables)
-        self.Variables=[sequence.ConsolidatedVariableLinkData[i] for i in range(index, index+length)]
-    
-    def PrintDump(self) -> str:
-        stringy:str = f'Behavior={self.BehaviorClass}\'{self.BehaviorObject}\','
-        stringy += f'LinkedVariables=(ArrayIndexAndLength={self.LinkedVariables}),OutputLinks=(ArrayIndexAndLength={self.OutputLinks})'
-        return stringy
 
 
 class BehaviorSequence:
-    EventData2 = []
-    BehaviorData2 = []
-    VariableData = []
-    '''Array of the actual variables used'''
-    ConsolidatedOutputLinkData = []
-    '''OutputLinkData array of links to subsequent behaviors'''
-    ConsolidatedVariableLinkData = []
-    '''VariableLinkData array of links to ConsolidatedLinkedVariables'''
-    ConsolidatedLinkedVariables = []
-    '''Array of indexes pointing to VariableData'''
-    
     def __init__(self, seq):
-        self.NodeData = copy.deepcopy(seq)
+        self.NodeData = seq
         if 'BehaviorSequenceName' in seq:
-            self.Name:str = seq['BehaviorSequenceName'].strip('"')
+            self.Name: str = seq['BehaviorSequenceName'].strip('"')
         
-        # Parse variables first so we have objects to link
-        self.VariableData = [VariableData(i, self) for i in seq['VariableData']]
+        # Even though we have the models we still use these lists for exporting
+        #  since we filter out any invalid model items (-1s if all removed)
+        self.ConsolidatedOutputLinkData = []
+        '''OutputLinkData array of links to subsequent behaviors'''
+        self.ConsolidatedVariableLinkData = []
+        '''VariableLinkData array of links to ConsolidatedLinkedVariables'''
+        self.ConsolidatedLinkedVariables = []
+        '''Array of indexes pointing to VariableData'''
+        
+        # Parse CLV first outside of models for lookup
         self.ConsolidatedLinkedVariables = []
         if seq['ConsolidatedLinkedVariables'] != '':
             self.ConsolidatedLinkedVariables = [int(i) for i in seq['ConsolidatedLinkedVariables'].split(',')]
-        self.ConsolidatedVariableLinkData = [VariableLinkData(i, self) for i in seq['ConsolidatedVariableLinkData']]
-        
-        self.EventData2 = [EventData(i, self) for i in seq['EventData2']]
-        self.BehaviorData2 = [BehaviorData(i, self) for i in seq['BehaviorData2']]
-        self.ConsolidatedOutputLinkData = [OutputLinkData(i, self) for i in seq['ConsolidatedOutputLinkData']]
+                    
+        # Now make the view models
+        from PyQt5.QtCore import QStringListModel
+        self.varTypeModel: QStringListModel = QStringListModel(VariableTypes._member_names_[0:VariableTypes.BVAR_MAX.value])
+        self.linkTypeModel: QStringListModel = QStringListModel(VariableLinkTypes._member_names_[0:VariableLinkTypes.BVARLINK_MAX.value])
 
-        # Now store all the output links in the objects
-        if len(self.ConsolidatedOutputLinkData)>0:   # Dark_Forest_Combat.TheWorld:PersistentLevel.Main_Sequence.InterpData_0.InterpGroup_0.InterpTrackBehaviors_0.BehaviorProviderDefinition_0
-            for i in self.EventData2 + self.BehaviorData2:
-                (index, length) = parse_arrayindexandlength(i.OutputLinks)       
-                for j in range(index, index+length):
-                    linkData = self.ConsolidatedOutputLinkData[j]
-                    i.Outputs.append(linkData)
+        from bpdeditor.model_variable import VariableItem, VariableItemModel
+        self.varModel: VariableItemModel = VariableItemModel([VariableItem(self, i) for i in seq['VariableData']], self)
+        from bpdeditor.model_varlink import VarLinkItem, VarLinkItemModel
+        self.varLinkModel: VarLinkItemModel = VarLinkItemModel([VarLinkItem(self, i) for i in seq['ConsolidatedVariableLinkData']], self)
+        from bpdeditor.model_event import EventItem, EventItemModel
+        self.eventModel: EventItemModel = EventItemModel([EventItem(self, i) for i in seq['EventData2']], self)
+        from bpdeditor.model_behavior import BehaviorItem, BehaviorItemModel
+        self.behaviorModel: BehaviorItemModel = BehaviorItemModel([BehaviorItem(self, i) for i in seq['BehaviorData2']], self)
+        # Out Links last to look up behaviorItemModel
+        from bpdeditor.model_outlink import OutLinkItem, OutLinkItemModel
+        self.outLinkModel: OutLinkItemModel = OutLinkItemModel([OutLinkItem(self, i) for i in seq['ConsolidatedOutputLinkData']], self, self.behaviorModel)
+        self.eventModel.createLinks(self.outLinkModel, self.varLinkModel)
+        self.behaviorModel.createLinks(self.outLinkModel, self.varLinkModel)
     
-    """
-    The following reconsolidation and export will only be usable
-    if the ConsolidatedVariableLinkData is actually editable,
-    which the online Wiki says it isn't - time to test this!
-    """
     
-    def Reconsolidate(self, graph):
+    def Reconsolidate(self):
         """
-        Reconsolidate the COLD, CVLD and CLV data based on the current graph connections.
-        EventData, BehaviorData and VariableData should already be updated to any changes
+        Reconsolidate the COLD, CVLD and CLV data based on the current model links.
+        The unpacked indexes are up-to-date, we just need to reorder the indexes to
+         be consecutive, and then repack the ArrayIndexAndLengths.
         """
-        # Alright suckas lets do this
-        from bpdeditor.bpd_gui import SequenceNode, EventNode, BehaviorNode
+        from PyQt5.QtCore import QPersistentModelIndex
         
         # Step 1 - Jump on ya bike
-        #   I'm making my own CLV list to combine simple links
-        #   The first part of the list is just indexes in order. These are shared between any linked with single variables (I haven't seen any with multiple yet)
+        #   I'm making my own CLV list to combine simple links.
+        #   The first part of the list is just indexes in order. These are shared between any links with single variables
         #   After this we just append any sequences from links with multiple variables.
-        self.ConsolidatedLinkedVariables = [*range(len(self.VariableData))]
+        self.EventData2 = [self.eventModel.item(i) for i in range(self.eventModel.rowCount())]
+        self.BehaviorData2 = [self.behaviorModel.item(i) for i in range(self.behaviorModel.rowCount())]
+        self.VariableData = [self.varModel.item(i) for i in range(self.varModel.rowCount())]
+        self.ConsolidatedLinkedVariables = [*range(self.varModel.rowCount())]
         self.ConsolidatedVariableLinkData = []
         self.ConsolidatedOutputLinkData = []
         
         # Step 2 - Do a backflip or two
-        for node in graph.sequenceNodes:
+        events = [self.eventModel.item(i) for i in range(self.eventModel.rowCount())]
+        behaviors = [self.behaviorModel.item(i) for i in range(self.behaviorModel.rowCount())]
+        for item in events + behaviors:
             
-            data = node.data
-            # Variable links - just need to update the LinkedVariables ArrayIndexAndLength
-            data.Variables=[]
-            data.VariableIndexes=[]
-            linkIndex = len(self.ConsolidatedVariableLinkData)
-            validLinks = [i.link for i in node.varLinkList.items if any(j.currentIndex()>=0 for j in i.varDropdownList)]
-            data.Variables = validLinks
-            linkLength = len(validLinks)
+            # Variable links - need to make sure indexes are consecutive for ArrayIndexAndLength
+            varLinkItems = item.GetAllVarLinkItems()
+            validLinkItems = [i for i in varLinkItems if any(j >= 0 for j in i.GetAllVariableIndexes())]
+            linkLength = len(validLinkItems)
             if linkLength > 0:
-                data.LinkedVariables = pack_arrayindexandlength(linkIndex, linkLength)
-                for link in validLinks:
-                    validIndexes = [i for i in link.LinkedVariableIndexes if i >= 0]
+                linkIndex = len(self.ConsolidatedVariableLinkData)
+                for link in validLinkItems:
+                    indexes = link.GetAllVariableIndexes()
+                    validIndexes = [i for i in indexes if i >= 0]
                     length = len(validIndexes)
                     if length == 0:
-                        link.LinkedVariables = 0
+                        link._LinkedVariables = 0
+                        link._LinkedVariableIndexes = []
                         continue
                     
                     self.ConsolidatedVariableLinkData.append(link)
@@ -264,90 +167,118 @@ class BehaviorSequence:
                         # If multiple, append these onto CLVs
                         index = len(validIndexes)
                         self.ConsolidatedLinkedVariables = self.ConsolidatedLinkedVariables + validIndexes
-                    link.LinkedVariables = pack_arrayindexandlength(index, length)
-                data.VariableIndexes = validIndexes
+                    link._LinkedVariables = pack_arrayindexandlength(index, length)
+                    link._LinkedVariableIndexes = [*range(index, index + length)]
+                # Model list must be complete here to get the new indexes right
+                item.LinkedVariables = pack_arrayindexandlength(linkIndex, linkLength)
+                item._VariableIndexes = [QPersistentModelIndex(self.varLinkModel.index(i, 3 + idx)) for idx, i in enumerate(range(linkIndex, linkIndex + linkLength))]
             else:
-                data.LinkedVariables = 0
+                item.LinkedVariables = 0
 
             # Output links
-            data.Outputs=[]
-            index = len(self.ConsolidatedOutputLinkData)
-            validOutputs = [i for i in node.outLinkList.items if i.dropdown.currentIndex() >= 0]
-            length = len(validOutputs)
+            outLinkItems = item.GetAllOutLinkItems()
+            validOutItems = [i for i in outLinkItems if i.LinkIndex >= 0]
+            length = len(validOutItems)
             if length > 0:
-                data.OutputLinks = pack_arrayindexandlength(index, length)
-                for item in validOutputs:
-                    output = item.link
-                    output.LinkIdAndLinkedBehavior=pack_linkidandlinkedbehavior(output.LinkId,output.LinkIndex)
-                    output.LinkedBehavior = output.sequence.BehaviorData2[output.LinkIndex]
-                    data.Outputs.append(output)
-                    self.ConsolidatedOutputLinkData.append(output)
+                index = len(self.ConsolidatedOutputLinkData)
+                # Shouldn't be necessary, but just in case...
+                item.OutputLinks = pack_arrayindexandlength(index, length)
+                for link in validOutItems:
+                    # Again just in case...
+                    link.LinkIdAndLinkedBehavior = pack_linkidandlinkedbehavior(link.LinkId, link.LinkIndex)
+                    self.ConsolidatedOutputLinkData.append(link)
             else:
-                data.OutputLinks = 0
+                item.OutputLinks = 0
 
         # Step 3 - Vibe on your cool moves
 
 
     def PrintDump(self) -> str:
         """ Prints the BPD sequence in object dump (hotfix) format """
+        from bpdeditor.model_variable import VariableItem, VariableItemModel
+        from bpdeditor.model_varlink import VarLinkItem, VarLinkItemModel
+        from bpdeditor.model_event import EventItem, EventItemModel
+        from bpdeditor.model_behavior import BehaviorItem, BehaviorItemModel
+        from bpdeditor.model_outlink import OutLinkItem, OutLinkItemModel
+        
         stringy:str = "EventData2=("
-        for i in self.EventData2:
-            stringy += '(' + i.PrintDump() + '),'
+        for row in range(self.eventModel.rowCount()):
+            i: EventItem = self.eventModel.item(row)
+            stringy += '(' + str(i) + '),'
         stringy = stringy.removesuffix(',')
+        
         stringy += '),BehaviorData2=('
-        for i in self.BehaviorData2:
-            stringy += '(' + i.PrintDump() + '),'
+        for row in range(self.behaviorModel.rowCount()):
+            i: BehaviorItem = self.behaviorModel.item(row)
+            stringy += '(' + str(i) + '),'
         stringy = stringy.removesuffix(',')
+        
         stringy += '),VariableData=('
-        for i in self.VariableData:
-            stringy += f'(Name={ f'\"{i.Name}\"' if len(i.Name)>0 else '' },Type={i.Type.name}),'
+        for row in range(self.varModel.rowCount()):
+            i: VariableItem = self.varModel.item(row)
+            stringy += '(' + str(i) + '),'
         stringy = stringy.removesuffix(',')
-        stringy += '),ConsolidatedOutputLinkData=('        
+        
+        stringy += '),ConsolidatedOutputLinkData=('
         for i in self.ConsolidatedOutputLinkData:
-            stringy += f'(LinkIdAndLinkedBehavior={i.LinkIdAndLinkedBehavior},ActivateDelay={i.ActiveDelay}),'
+            stringy += '(' + str(i) + '),'
         stringy = stringy.removesuffix(',')
-        stringy += '),ConsolidatedVariableLinkData=('        
+        
+        stringy += '),ConsolidatedVariableLinkData=('
         for i in self.ConsolidatedVariableLinkData:
-            stringy += i.PrintDump() + ','
+            stringy += str(i) + ','
         stringy = stringy.removesuffix(',')
+        
         stringy += '),ConsolidatedLinkedVariables=('
         for i in self.ConsolidatedLinkedVariables:
             stringy += str(i) + ','
         stringy = stringy.removesuffix(',')
+        
         stringy += ')'
         return stringy
     
     
     def ExportNodeStructure(self):
-        """
-        Exports our sequence object data back into node dictionary structure
-        """
-        node=self.NodeData
+        """ Exports our sequence object data back into data dictionary structure """
+        from bpdeditor.model_variable import VariableItem, VariableItemModel
+        from bpdeditor.model_varlink import VarLinkItem, VarLinkItemModel
+        from bpdeditor.model_event import EventItem, EventItemModel
+        from bpdeditor.model_behavior import BehaviorItem, BehaviorItemModel
+        from bpdeditor.model_outlink import OutLinkItem, OutLinkItemModel
+        
+        node = copy.deepcopy(self.NodeData)
         node['EventData2'] = []
-        for i in self.BehaviorData2:
+        for row in range(self.eventModel.rowCount()):
+            i: EventItem = self.eventModel.item(row)
             node['EventData2'].append({
                 'UserData':{i.UserData},
                 'OutputVariables':{'ArrayIndexAndLength':i.LinkedVariables},
                 'OutputLinks':{'ArrayIndexAndLength':i.OutputLinks}
             })
+        
         node['BehaviorData2'] = []
-        for i in self.BehaviorData2:
+        for row in range(self.behaviorModel.rowCount()):
+            i: BehaviorItem = self.behaviorModel.item(row)
             node['VariableData'].append({
                 'Behavior': f'{i.BehaviorClass}\'{i.BehaviorObject}\'',
                 'LinkedVariables': {'ArrayIndexAndLength':i.LinkedVariables,'OutputLinks':{'ArrayIndexAndLength':i.OutputLinks}}
                 })
+        
         node['VariableData'] = []
-        for i in self.VariableData:
+        for row in range(self.varModel.rowCount()):
+            i: VariableItem = self.varModel.item(row)
             node['VariableData'].append({
                 'Name': f'\"{i.Name}\"' if len(i.Name)>0 else '',
                 'Type': i.Type.name
                 })
+        
         node['ConsolidatedOutputLinkData'] = []
         for i in self.ConsolidatedOutputLinkData:
             node['ConsolidatedOutputLinkData'].append({
                 'ActivateDelay': i.LinkIdAndLinkedBehavior,
                 'Type': i.ActiveDelay
                 })
+        
         node['ConsolidatedVariableLinkData'] = []
         for i in self.ConsolidatedVariableLinkData:
             node['ConsolidatedVariableLinkData'].append({
@@ -357,9 +288,11 @@ class BehaviorSequence:
                 'LinkedVariables': {'ArrayIndexAndLength':i.LinkedVariables},
                 'CachedPropery': str(i.CachedProperty)
                 })
+        
         node['ConsolidatedLinkedVariables'] = ''
         for i in self.ConsolidatedLinkedVariables:
             node['ConsolidatedLinkedVariables'] += str(i) + ','
+        
         node['ConsolidatedLinkedVariables']=node['ConsolidatedLinkedVariables'].removesuffix(',')
         return node
-        
+    
